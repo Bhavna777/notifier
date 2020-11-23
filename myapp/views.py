@@ -6,10 +6,13 @@ import imaplib
 import email
 import smtplib
 
+
+
+username = 'greenhathacker777@gmail.com'
+password = 'mickey virus'
+
 def index(request):
     host = 'imap.gmail.com'
-    username = 'Sir Here you can enter your email id'
-    password = 'Sir here you can enter your Password'
 
     mail = imaplib.IMAP4_SSL(host)
     mail.login(username, password)
@@ -33,8 +36,6 @@ def send(request):
     subject = request.POST.get('subject', 'default')
     message = request.POST.get('message', 'default')
     my_message = "Subject:{}\n\n{}".format(subject,message)
-    username = 'Sir Here you can enter your email id'
-    password = 'Sir Here you can enter your Password'
     mail = smtplib.SMTP('smtp.gmail.com', 587)
     mail.ehlo()
     mail.starttls()
@@ -49,8 +50,6 @@ def send(request):
 
 def recieve(request):
     host = 'imap.gmail.com'
-    username = 'Sir Here you can enter your email id'
-    password = 'Sir Here you can enter your password'
 
     def get_inbox():
         mail = imaplib.IMAP4_SSL(host)
