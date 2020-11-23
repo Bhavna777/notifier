@@ -8,8 +8,8 @@ import smtplib
 
 
 
-username = 'greenhathacker777@gmail.com'
-password = 'mickey virus'
+username = 'Sir please enter your email id here'
+password = 'Sir please enter your password here'
 
 def index(request):
     host = 'imap.gmail.com'
